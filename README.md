@@ -1,67 +1,47 @@
+---
 
+## 🔍 Penjelasan Setiap Fitur dan Kegunaannya
 
-### 🔐 Autentikasi
-- [login.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/login.php)  
-  *Login admin menggunakan email dan password.*
-  
-- [login_pembeli.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/login_pembeli.php)  
-  *Login pembeli, validasi dari tabel `pelanggan`.*
+### 🔐 Autentikasi (Login & Register)
 
-- [register.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/register.php)  
-  *Registrasi admin ke tabel `users`.*
-
-- [register_pembeli.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/register_pembeli.php)  
-  *Registrasi pembeli ke tabel `pelanggan`.*
+- **`login.php`** — Form login untuk admin. Mengecek data dari tabel `users`. Jika berhasil, diarahkan ke dashboard admin.
+- **`register.php`** — Digunakan untuk mendaftarkan admin baru. Data disimpan di tabel `users` dengan password yang dienkripsi.
+- **`login_pembeli.php`** — Form login untuk pembeli. Memeriksa email dan password dari tabel `pelanggan`.
+- **`register_pembeli.php`** — Form pendaftaran akun pembeli. Setelah berhasil, pembeli bisa langsung login ke sistem.
 
 ---
 
-### 🛍️ Fitur Pembeli
-- [pembeli/index.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/pembeli/index.php)  
-  *Menampilkan semua produk untuk pembeli.*
+### 🛒 Fitur Pembeli
 
-- [pembeli/produk.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/pembeli/produk.php)  
-  *Detail produk berdasarkan ID.*
-
-- [pembeli/beli.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/pembeli/beli.php)  
-  *Form pembelian produk oleh pembeli.*
-
-- [pembeli/checkout.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/pembeli/checkout.php)  
-  *Proses checkout: menyimpan transaksi & detail transaksi.*
-
-- [pembeli/sukses.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/pembeli/sukses.php)  
-  *Tampilan struk/konfirmasi pembelian berhasil.*
-
-- [pembeli/transaksi.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/pembeli/transaksi.php)  
-  *Riwayat transaksi pembeli.*
+- **`pembeli/index.php`** — Halaman utama pembeli. Menampilkan semua produk yang tersedia.
+- **`pembeli/produk.php`** — Menampilkan detail lengkap produk berdasarkan ID.
+- **`pembeli/beli.php`** — Halaman form pembelian. Pembeli mengisi jumlah produk yang akan dibeli.
+- **`pembeli/checkout.php`** — Menyimpan transaksi dan detailnya ke database. Menghitung total dan mencatat waktu pembelian.
+- **`pembeli/sukses.php`** — Menampilkan struk atau bukti pembelian setelah transaksi berhasil.
+- **`pembeli/transaksi.php`** — Menampilkan riwayat transaksi pembeli, termasuk total dan statusnya.
 
 ---
 
-### 🛠️ Fitur Admin
-- [admin_produk/index.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/admin_produk/index.php)  
-  *Kelola data produk: tambah, edit, hapus.*
+### 👨‍💼 Fitur Admin
 
-- [admin_user/index.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/admin_user/index.php)  
-  *Kelola akun admin.*
-
-- [dashboard.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/dashboard.php)  
-  *Halaman utama admin setelah login.*
+- **`dashboard.php`** — Berisi ringkasan data seperti jumlah produk dan transaksi. Halaman utama admin setelah login.
+- **`admin_produk/`** — Modul untuk melihat, menambah, mengedit, dan menghapus produk. Data tersimpan di tabel `produk`.
+- **`admin_user/`** — Modul untuk mengelola akun admin: tambah, edit, dan hapus user.
+- **`admin_kategori/`** *(jika ada)* — Untuk mengelompokkan produk berdasarkan kategori.
+- **`admin_aktivitas/`** *(jika ada)* — Melacak aktivitas yang dilakukan oleh admin.
 
 ---
 
-### ⚙️ Konfigurasi
-- [includes/db.php](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/includes/db.php)  
-  *File koneksi database MySQL.*
+### ⚙️ Lain-lain
+
+- **`includes/db.php`** — File koneksi ke database. Dipanggil di hampir semua file.
+- **`uploads/`** — Folder penyimpanan gambar produk yang diunggah oleh admin.
+- **`preloved_store.sql`** — File SQL untuk membuat seluruh tabel yang dibutuhkan dalam sistem:
+  - `users` (admin)
+  - `pelanggan` (pembeli)
+  - `produk` (barang)
+  - `transaksi` (data pembelian)
+  - `transaksi_detail` (rincian pembelian)
 
 ---
 
-### 🗃️ Database
-- [preloved_store.sql](https://github.com/Clapasapian/Project-UAS-Chandalallo/blob/main/preloved_store.sql)  
-  *Struktur tabel: `produk`, `users`, `pelanggan`, `transaksi`, `transaksi_detail`.*
-
----
-
-## 🚀 Cara Menjalankan
-
-1. Clone repository ini:
-   ```bash
-   git clone https://github.com/Clapasapian/Project-UAS-Chandalallo.git
