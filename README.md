@@ -1,7 +1,7 @@
 
 ---
 
-## 🔑 Fitur & Akses Langsung
+## 🔑 
 
 ### ✨ Admin
 - 🧾 Produk → Kelola produk  
