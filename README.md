@@ -1,47 +1,46 @@
----
-
-## 🔍 Penjelasan Setiap Fitur dan Kegunaannya
-
-### 🔐 Autentikasi (Login & Register)
-
-- **`login.php`** — Form login untuk admin. Mengecek data dari tabel `users`. Jika berhasil, diarahkan ke dashboard admin.
-- **`register.php`** — Digunakan untuk mendaftarkan admin baru. Data disimpan di tabel `users` dengan password yang dienkripsi.
-- **`login_pembeli.php`** — Form login untuk pembeli. Memeriksa email dan password dari tabel `pelanggan`.
-- **`register_pembeli.php`** — Form pendaftaran akun pembeli. Setelah berhasil, pembeli bisa langsung login ke sistem.
 
 ---
 
-### 🛒 Fitur Pembeli
+## 🔑 Fitur & Penjelasan
 
-- **`pembeli/index.php`** — Halaman utama pembeli. Menampilkan semua produk yang tersedia.
-- **`pembeli/produk.php`** — Menampilkan detail lengkap produk berdasarkan ID.
-- **`pembeli/beli.php`** — Halaman form pembelian. Pembeli mengisi jumlah produk yang akan dibeli.
-- **`pembeli/checkout.php`** — Menyimpan transaksi dan detailnya ke database. Menghitung total dan mencatat waktu pembelian.
-- **`pembeli/sukses.php`** — Menampilkan struk atau bukti pembelian setelah transaksi berhasil.
-- **`pembeli/transaksi.php`** — Menampilkan riwayat transaksi pembeli, termasuk total dan statusnya.
+### ✨ Admin
+- **admin_produk/** → Tambah, ubah, dan hapus produk.
+- **admin_kategori/** → Mengelola kategori produk.
+- **admin_user/** → Mengelola data admin.
+- **includes/auth.php** → Membatasi akses hanya untuk admin login.
 
----
+### 🛍️ Pembeli
+- **register_pembeli.php** → Form registrasi pengguna baru.
+- **login_pembeli.php** → Login pembeli.
+- **includes/auth_pembeli.php** → Melindungi halaman khusus pembeli.
+- **pembeli/index.php** → Beranda produk untuk pembeli.
+- **pembeli/produk.php** → Menampilkan detail produk.
+- **pembeli/beli.php** → Menambahkan produk ke keranjang.
+- **pembeli/checkout.php** → Proses checkout dan simpan transaksi.
+- **pembeli/sukses.php** → Menampilkan bukti pembelian berhasil.
+- **pembeli/transaksi.php** → Daftar transaksi yang pernah dilakukan pembeli.
 
-### 👨‍💼 Fitur Admin
-
-- **`dashboard.php`** — Berisi ringkasan data seperti jumlah produk dan transaksi. Halaman utama admin setelah login.
-- **`admin_produk/`** — Modul untuk melihat, menambah, mengedit, dan menghapus produk. Data tersimpan di tabel `produk`.
-- **`admin_user/`** — Modul untuk mengelola akun admin: tambah, edit, dan hapus user.
-- **`admin_kategori/`** *(jika ada)* — Untuk mengelompokkan produk berdasarkan kategori.
-- **`admin_aktivitas/`** *(jika ada)* — Melacak aktivitas yang dilakukan oleh admin.
-
----
-
-### ⚙️ Lain-lain
-
-- **`includes/db.php`** — File koneksi ke database. Dipanggil di hampir semua file.
-- **`uploads/`** — Folder penyimpanan gambar produk yang diunggah oleh admin.
-- **`preloved_store.sql`** — File SQL untuk membuat seluruh tabel yang dibutuhkan dalam sistem:
-  - `users` (admin)
-  - `pelanggan` (pembeli)
-  - `produk` (barang)
-  - `transaksi` (data pembelian)
-  - `transaksi_detail` (rincian pembelian)
+### ⚙️ Backend
+- **includes/db.php** → Koneksi ke database MySQL.
+- **uploads/** → Folder untuk menyimpan gambar yang diunggah admin.
 
 ---
 
+## 🔗 Akses Langsung ke Source Code
+
+> Klik untuk melihat isi file langsung di GitHub:
+
+- [login_pembeli.php](./login_pembeli.php)
+- [register_pembeli.php](./register_pembeli.php)
+- [pembeli/index.php](./pembeli/index.php)
+- [pembeli/beli.php](./pembeli/beli.php)
+- [pembeli/checkout.php](./pembeli/checkout.php)
+- [pembeli/sukses.php](./pembeli/sukses.php)
+
+---
+
+## 🚀 Cara Menjalankan Proyek
+
+1. Clone repositori ini:
+   ```bash
+   git clone https://github.com/Clapasapan/Project-UAS-Chandalallo.git
