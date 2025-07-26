@@ -1,5 +1,5 @@
-https://cla.clapreloved.shop/
-
+link web : https://cla.clapreloved.shop/
+link vidio : https://youtu.be/6pnwhe_te0A
 ---
 **DAFTAR PUSTAKA**
 
